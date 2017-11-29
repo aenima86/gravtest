@@ -1,6 +1,8 @@
 
 # **4. Account related requests**
---- 
+
+TEST
+
 This chapter will guide you through the process of retrieving account information from a NEM Infrastructure Server. The information that can be retrieved is the durable account data, its meta data and information about transactions and harvested blocks.
 
  
