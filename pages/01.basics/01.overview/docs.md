@@ -1,8 +1,3 @@
----
-title: Overview
-taxonomy:
-    category: docs
----
 
 # **4. Account related requests**
 --- 
