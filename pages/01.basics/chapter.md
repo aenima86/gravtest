@@ -9,4 +9,6 @@ child_type: docs
 
 # Basics
 
+TEST
+
 Discover the **basic** principles
