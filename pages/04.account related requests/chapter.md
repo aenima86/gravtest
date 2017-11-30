@@ -1,7 +1,8 @@
 ---
-title: Account related requests
+title: Account
 taxonomy:
-    category: docs
+    category:
+        - docs
 child_type: docs
 ---
 
