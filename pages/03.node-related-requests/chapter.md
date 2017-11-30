@@ -1,5 +1,5 @@
 ---
-title: Node related requests
+title: 'Node related requests'
 taxonomy:
     category: docs
 ---
