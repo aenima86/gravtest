@@ -7,7 +7,6 @@ taxonomy:
  
 As stated above, only one of the cosignatories (Bob, Jusan and Go) can create a transaction for the account Alice.
 
- 
 Lets assume Bob wants to start a transfer transaction which transfers 1000 NEM from account Alice to account Jusan. Since the account Alice is a multisig account the transfer transaction (in the JSON object the "otherTrans" structure) must be wrapped in a multisig transaction (see Appendix A: MultisigTransaction ). The corresponding RequestPrepareAnnounce object would look similar to this (test network): 
 
  
@@ -61,11 +60,11 @@ NIS will sign the transaction and publish it. The returned NemAnnounceResult obj
 The hash is needed by the nodes that will create multisig signature transactions for the above transaction.
 
  
-At this point the transaction cannot (and will not) be included in a block because none of the other cosignatories - Jusan and Go - has signed the transaction yet …
+At this point the transaction cannot (and will not) be included in a block because none of the other cosignatories - Jusan and Go - has signed the transaction yet â€¦
 
  
 ### Cosigning multisig transaction 
-… to do so, Jusan or Go must initiate a multisig signature transaction (see Appendix A: MultisigSignatureTransaction ). Jusan has to create a RequestPrepareAnnounce JSON object that looks similar to this (test network): 
+â€¦ to do so, Jusan or Go must initiate a multisig signature transaction (see Appendix A: MultisigSignatureTransaction ). Jusan has to create a RequestPrepareAnnounce JSON object that looks similar to this (test network): 
 
  
 ```json
