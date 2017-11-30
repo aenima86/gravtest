@@ -2,7 +2,6 @@
 title: Account related requests
 taxonomy:
     category: docs
-child_type: docs
 ---
 
  
