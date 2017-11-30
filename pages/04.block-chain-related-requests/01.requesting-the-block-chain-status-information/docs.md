@@ -5,7 +5,7 @@ taxonomy:
 ---
 
  
-### 5.3.1 Block chain height 
+### Block chain height 
 | API path: | Request type:  |
 |------|------|
 | /chain/height | GET|
@@ -30,7 +30,7 @@ http://127.0.0.1:7890/chain/height
 None.
 
  
-### 5.3.2 Block chain score 
+### Block chain score 
 | API path: | Request type:  |
 |------|------|
 | /chain/score | GET|
@@ -55,7 +55,7 @@ http://127.0.0.1:7890/chain/score
 None.
 
  
-### 5.3.3 Last block of the block chain score 
+### Last block of the block chain score 
 | API path: | Request type:  |
 |------|------|
 | /chain/last-block | GET|

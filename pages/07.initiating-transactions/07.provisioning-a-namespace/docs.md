@@ -28,7 +28,11 @@ This chapter explains what actions you have to take in order to provision (i.e. 
             }
         
 ``` 
-The field 'parent' is set to null indicating that you want to rent a root namespace. You also have to be sure that no one else has already rented that root namespace or NIS will return an error. The high rental fee is there to prevent users from squatting all kinds of root namespaces. This fee is not given to the harvesters because this would encourage harvesters to wait until they are allowed to harvest a block, include their provision namespace transaction in that block and thus essentially getting the namespace for free. Instead all rental fees are collected in a special multisig account. The most common error responses from NIS will be: The namespace is already owned by another account. The namespace contains illegal character or a reserved namespace part. The public key of the rental fee sink is invalid. The rental fee is invalid (i.e. too low). If NIS responses with a success message, the transaction is broadcasted to the network and will get included in a future block. After the transaction is included in a block you can check that you are the owner of that namespace by issuing an /account/namespaces request, see chapter xyz. 
+The field 'parent' is set to null indicating that you want to rent a root namespace. You also have to be sure that no one else has already rented that root namespace or NIS will return an error. The high rental fee is there to prevent users from squatting all kinds of root namespaces. This fee is not given to the harvesters because this would encourage harvesters to wait until they are allowed to harvest a block, include their provision namespace transaction in that block and thus essentially getting the namespace for free. Instead all rental fees are collected in a special multisig account. The most common error responses from NIS will be:
+* The namespace is already owned by another account.
+* The namespace contains illegal character or a reserved namespace part.
+* The public key of the rental fee sink is invalid.
+* The rental fee is invalid (i.e. too low). If NIS responses with a success message, the transaction is broadcasted to the network and will get included in a future block. After the transaction is included in a block you can check that you are the owner of that namespace by issuing an /account/namespaces request, see chapter xyz. 
 
  
 To rent the sub-namespace 'alice.vouchers' you need again send a RequestPrepareAnnounce JSON object to NIS which this time looks like this:

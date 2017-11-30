@@ -8,7 +8,7 @@ taxonomy:
 This chapter explains which data from the transactions you need to sign and what JSON object you to send to NIS.
 
  
-### 8.11.1 Gathering data for the signature 
+### Gathering data for the signature 
 To create a transaction signature you need to sign an array of bytes extracted from the transaction. Since there is more than one type of transaction the byte array will have a different structure for different types of transactions. Nevertheless the first part of the byte array has the same structure for every transaction. Note that:
 
  
@@ -66,7 +66,7 @@ Signing this array will give you the 64 byte long signature.
 NIS uses the SHA3-256 hash function. To create a hash of a transaction you need to hash the byte array of the transaction. See the section above to learn how to build the byte array from a transaction.
 
  
-### 8.11.2 Sending the data to NIS 
+### Sending the data to NIS 
 After preparing the data as described in the last section you can send the array and the corresponding signature via a RequestAnnounce request
 
  

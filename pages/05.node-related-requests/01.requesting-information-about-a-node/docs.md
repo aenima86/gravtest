@@ -5,7 +5,7 @@ taxonomy:
 ---
 
  
-### 6.3.1 Basic node information 
+### Basic node information 
 | API path: | Request type:  |
 |------|------|
 | /node/info | GET|
@@ -46,7 +46,7 @@ http://127.0.0.1:7890/node/info
 In case the node has not been booted yet, NIS will return a JSON error object. See Appendix A: Error object ** **for more information of the error object and Appendix B: NIS Errors for the error message. 
 
  
-### 6.3.2 Extended node information 
+### Extended node information 
 | API path: | Request type:  |
 |------|------|
 | /node/extended-info | GET|

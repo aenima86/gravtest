@@ -5,7 +5,7 @@ taxonomy:
 ---
 
  
-### 6.4.1 Complete neighborhood 
+### Complete neighborhood 
 | API path: | Request type:  |
 |------|------|
 | /node/peer-list/all | GET|
@@ -46,7 +46,7 @@ http://127.0.0.1:7890/node/peer-list/all
 In case the node has not been booted yet, NIS will return a JSON error object. See Appendix A: Error object ** **for more information of the error object and Appendix B: NIS Errors for the error message. 
 
  
-### 6.4.2 Reachable neighborhood 
+### Reachable neighborhood 
 | API path: | Request type:  |
 |------|------|
 | /node/peer-list/reachable | GET|
@@ -90,7 +90,7 @@ http://127.0.0.1:7890/node/peer-list/reachable
 In case the node has not been booted yet, NIS will return a JSON error object. See Appendix A: Error object ** **for more information of the error object and Appendix B: NIS Errors for the error message. 
 
  
-### 6.4.3 Active neighborhood 
+### Active neighborhood 
 | API path: | Request type:  |
 |------|------|
 | /node/peer-list/active | GET|
@@ -134,7 +134,7 @@ http://127.0.0.1:7890/node/peer-list/active
 In case the node has not been booted yet, NIS will return a JSON error object. See Appendix A: Error object ** **for more information of the error object and Appendix B: NIS Errors for the error message. 
 
  
-### 6.4.4 Maximum chain height in the active neighborhood 
+### Maximum chain height in the active neighborhood 
 | API path: | Request type:  |
 |------|------|
 | /node/active-peers/max-chain-height | GET|

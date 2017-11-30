@@ -8,7 +8,7 @@ taxonomy:
 NIS supports transfer transactions having version 1 or 2. Transfer transactions with version 1 can only transfer a message and XEM coins while version 2 transfer transactions can transfer a set of mosaics too.
 
  
-### 8.4.1 Version 1 transfer transactions 
+### Version 1 transfer transactions 
 Suppose you want to send 1000 NEM from sender account (referred hereafter as **'Alice'**):
 
  
@@ -61,7 +61,7 @@ Note that there is no signature in the transaction part of the object since NIS 
         "innerTransactionHash": {}
         }
 ``` 
-### 8.4.2 Version 2 transfer transactions 
+### Version 2 transfer transactions 
 With transfer transactions version 2 you can just transfer messages and XEM as described in the previous chapter, the only difference being the field version which should have the value -1744830462 = 0x98000002 for testnet or 1744830466 = 0x68000002 for mainnet. 
 
  
@@ -104,13 +104,18 @@ However, version 2 transfer transaction are more powerful as they let you transf
         }
     
 ``` 
-There are 2 mosaics attached to the transfer transaction: A mosaic with id 'makoto.metals.silver * coin' and quantity 1 which represents 1 smallest unit available for the mosaic. Since the divisibility of that mosaic is 0 (as assumed above) the quantity represents 1 whole unit, i.e. 1 coin. A mosaic with id 'nem * xem' (which is the special XEM mosaic representing regular XEM coins) which has a divisibility of 6 and thus the quantity of 100000000 represents 100 XEM. You can view the attachment as being a bag of mosaics holding in this example 1 silver coin mosaic and 100 XEM. 
+There are 2 mosaics attached to the transfer transaction:
+* A mosaic with id 'makoto.metals.silver * coin' and quantity 1 which represents 1 smallest unit available for the mosaic. Since the divisibility of that mosaic is 0 (as assumed above) the quantity represents 1 whole unit, i.e. 1 coin.
+* A mosaic with id 'nem * xem' (which is the special XEM mosaic representing regular XEM coins) which has a divisibility of 6 and thus the quantity of 100000000 represents 100 XEM. You can view the attachment as being a bag of mosaics holding in this example 1 silver coin mosaic and 100 XEM. 
 
  
 The amount field of the transaction is interpreted differently for the transaction due to the attachment. The number to multiply the quantities given in the attachment is given by dividing the amount by 1,000,000 (as of this version NIS does not support fractional transfers). So in this example 3,000,000 / 1,000,000 = 3 and thus 3 times the attachment is transferred resulting in 3 silver coin mosaics and 300 XEM being transferred to the recipient.
 
  
-Common reason for the transaction to be rejected could be: At least one mosaic specified in the attachment is unknown to NIS. The sender does not own enough mosaics of at least type specified in the attachment. At least one mosaic specified in the attachment is defined as not transferable and both sender and recipient are not the creator of that mosaic. 
+Common reason for the transaction to be rejected could be:
+* At least one mosaic specified in the attachment is unknown to NIS.
+* The sender does not own enough mosaics of at least type specified in the attachment.
+* At least one mosaic specified in the attachment is defined as not transferable and both sender and recipient are not the creator of that mosaic. 
 
  
 If the mosaic definition for the mosaic 'makoto.metals.silver * coin' has a levy section stating that for each transfer involving the silver coin mosaic 10 XEM has to be paid to the recipient with address TDGOGOGOWZJ3HU4F6CUM5IKE7GHG4FFTF5BZ7JPW then the transfer transaction would automatically induce a transfer of 10 XEM from the transaction sender to TDGOGOGOWZJ3HU4F6CUM5IKE7GHG4FFTF5BZ7JPW.

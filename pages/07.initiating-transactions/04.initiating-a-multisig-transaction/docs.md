@@ -64,7 +64,7 @@ The hash is needed by the nodes that will create multisig signature transactions
 At this point the transaction cannot (and will not) be included in a block because none of the other cosignatories - Jusan and Go - has signed the transaction yet …
 
  
-### 8.6.1 Cosigning multisig transaction 
+### Cosigning multisig transaction 
 … to do so, Jusan or Go must initiate a multisig signature transaction (see Appendix A: MultisigSignatureTransaction ). Jusan has to create a RequestPrepareAnnounce JSON object that looks similar to this (test network): 
 
  

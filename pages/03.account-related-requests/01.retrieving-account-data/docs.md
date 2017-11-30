@@ -5,7 +5,7 @@ taxonomy:
 ---
 
  
-### 4.3.1 Generating new account data 
+### Generating new account data 
 | API path: | Request type:  |
 |------|------|
 | /account/generate | GET|
@@ -32,7 +32,7 @@ http://127.0.0.1:7890/account/generate
 None.
 
  
-### 4.3.2 Requesting the account data 
+### Requesting the account data 
 | API path: | Request type:  |
 |------|------|
 | /account/get | GET|
@@ -108,7 +108,7 @@ The returned JSON object has the same structure as in the first example.
 If the public key parameter is not valid, NIS returns an error. See Appendix B: NIS Errors for details about errors. 
 
  
-### 4.3.3 Requesting the original account data for a delegate account 
+### Requesting the original account data for a delegate account 
 | API path: | Request type:  |
 |------|------|
 | /account/get/forwarded | GET|
@@ -184,7 +184,7 @@ The returned JSON object has the same structure as in the first example.
 If the public key parameter is not valid, NIS returns an error. See Appendix B: NIS Errors for details about errors. 
 
  
-### 4.3.4 Requesting the account status 
+### Requesting the account status 
 | API path: | Request type:  |
 |------|------|
 | /account/status | GET|
@@ -217,7 +217,7 @@ http://127.0.0.1:7890/account/status?address=TALICELCD3XPH4FFI5STGGNSNSWPOTG5E4D
 If the address parameter is not valid, NIS returns an error. See Appendix B: NIS Errors for details about errors. 
 
  
-### 4.3.5 Requesting transaction data for an account 
+### Requesting transaction data for an account 
 A transaction is said to be incoming with respect to an account if the account is the recipient of the transaction. In the same way outgoing transaction are the transactions where the account is the sender of the transaction. Unconfirmed transactions are those transactions that have not yet been included in a block. Unconfirmed transactions are **not** guaranteed to be included in any block.
 
  
@@ -463,7 +463,7 @@ http://127.0.0.1:7890/account/unconfirmedTransactions?address=TALICELCD3XPH4FFI5
 If the address parameter is not valid, NIS returns an error. See Appendix B: NIS Errors Errors for details about errors. 
 
  
-### 4.3.6 Transaction data with decoded messages 
+### Transaction data with decoded messages 
 All the requests for retrieving transaction data for an account which were described in previous part do not decode any message contained in a transaction. The following requests are similar to the ones above but are able to return transaction data with decoded messages. Decoding requires the private key of an account for which transactions are requested. Therefore the following requests **should only be done when NIS is running locally**.
 
  
@@ -506,7 +506,7 @@ See section: Requesting transaction data for an account
 If the private key is not supplied, NIS returns an error. See Appendix B: NIS Errors for details about errors. 
 
  
-### 4.3.7 Requesting harvest info data for an account 
+### Requesting harvest info data for an account 
 | API path: | Request type:  |
 |------|------|
 | /account/harvests | GET|
@@ -545,7 +545,7 @@ Gets an array of harvest info objects for an account.
 If the address parameter is not valid or the hash cannot be found in the database, NIS returns an error. See Appendix B: NIS Errors Errors for details about errors. 
 
  
-### 4.3.8 Retrieving account importances for accounts 
+### Retrieving account importances for accounts 
 | API path: | Request type:  |
 |------|------|
 | /account/importances | GET|
@@ -584,7 +584,7 @@ http://127.0.0.1:7890/account/importances
 None.
 
  
-### 4.3.9 Retrieving namespaces that an account owns 
+### Retrieving namespaces that an account owns 
 | API path: | Request type:  |
 |------|------|
 | /account/namespace/page | GET|
@@ -622,7 +622,7 @@ http://127.0.0.1:7890/account/namespace/page?address=TD3RXTHBLK6J3UD2BH2PXSOFLPW
 NIS returns an error if the address or the parent (if supplied) is invalid. See Appendix B: NIS Errors for details about errors. 
 
  
-### 4.3.10 Retrieving mosaic definitions that an account has created 
+### Retrieving mosaic definitions that an account has created 
 | API path: | Request type:  |
 |------|------|
 | /account/mosaic/definition/page | GET|
@@ -675,7 +675,7 @@ http://127.0.0.1:7890/account/mosaic/definition/page?address=TD3RXTHBLK6J3UD2BH2
 NIS returns an error if the address, the parent (if supplied) or the id (if supplied) is invalid. See Appendix B: NIS Errors for details about errors. 
 
  
-### 4.3.11 Retrieving mosaics that an account owns 
+### Retrieving mosaics that an account owns 
 | API path: | Request type:  |
 |------|------|
 | /account/mosaic/owned | GET|
@@ -718,7 +718,7 @@ http://127.0.0.1:7890/account/mosaic/owned?address=TD3RXTHBLK6J3UD2BH2PXSOFLPWZO
 NIS returns an error if the address is invalid. See Appendix B: NIS Errors for details about errors. 
 
  
-### 4.3.12 Locking and unlocking accounts 
+### Locking and unlocking accounts 
 Accounts that have at least 10000 vested NEM balance are allowed to harvest blocks. To do that the account must be unlocked. After start-up of NIS all accounts are locked by default.
 
  
@@ -770,7 +770,7 @@ Request cannot be performed in a browser.
 Both requests return an error if the private key does not correspond to a known account or the account is not allowed to harvest. See Appendix B: NIS Errors for details about errors. 
 
  
-### 4.3.13 Retrieving the unlock info 
+### Retrieving the unlock info 
 Each node can allow users to harvest with their delegated key on that node. The NIS configuration has entries for configuring the maximum number of allowed harvesters and optionally allow harvesting only for certain account addresses. The unlock info gives information about the maximum number of allowed harvesters and how many harvesters are already using the node. 
 
  

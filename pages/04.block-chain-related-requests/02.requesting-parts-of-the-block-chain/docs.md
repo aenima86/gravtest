@@ -8,7 +8,7 @@ taxonomy:
 NIS can supply either individual blocks identified by block height or block hash or can supply up to 10 blocks beginning at a certain height.
 
  
-### 5.4.1 Getting a block with a given hash 
+### Getting a block with a given hash 
 | API path: | Request type:  |
 |------|------|
 | /block/get | GET|
@@ -49,7 +49,7 @@ http://127.0.0.1:7890/block/get?blockHash=58efa578aea719b644e8d7c731852bb26d8505
 If the block hash is not found in the database, NIS will return a JSON error object. See Appendix A: Error object or more information of the error object and Appendix B: NIS Errors for the error message. 
 
  
-### 5.4.2 Getting a block with a given height 
+### Getting a block with a given height 
 | API path: | Request type:  |
 |------|------|
 | /block/at/public | POST|
@@ -90,7 +90,7 @@ Request cannot be performed in a browser.
 If the block with the specified height cannot be found in the database, NIS will return a JSON error object. See Appendix A: Error object or more information of the error object and Appendix B: NIS Errors the error message. 
 
  
-### 5.4.3 Getting part of a chain 
+### Getting part of a chain 
 | API path: | Request type:  |
 |------|------|
 | /local/chain/blocks-after | POST|
