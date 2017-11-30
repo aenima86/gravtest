@@ -2,7 +2,6 @@
 title: Appendix B  NIS Errors
 taxonomy:
     category: docs
-child_type: docs
 ---
 
  

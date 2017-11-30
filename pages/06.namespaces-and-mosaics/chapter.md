@@ -2,7 +2,6 @@
 title: Namespaces and Mosaics
 taxonomy:
     category: docs
-child_type: docs
 ---
 
  

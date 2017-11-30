@@ -2,7 +2,6 @@
 title: Node related requests
 taxonomy:
     category: docs
-child_type: docs
 ---
 
  

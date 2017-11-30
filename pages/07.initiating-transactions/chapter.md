@@ -2,7 +2,6 @@
 title: Initiating transactions
 taxonomy:
     category: docs
-child_type: docs
 ---
 
  
